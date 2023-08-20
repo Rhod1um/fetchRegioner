@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<h1>indsæt kommune</h1>
+
+<div> <!--at bruge action er gammeldags måde at inludere url-->
+  <form action="http://localhost:8080/kommune" method="post" id="formKommune">
+    <div>
+      <label for="inpCode">Kode</label> <!--id?-->
+      <input
+              type="text"
+              name="kode"
+              class="inputfield"
+              placeholder="eks. 7000"
+              id="inpCode"> <!--name bruger vi i js-->
+    </div>
+    <div>
+      <label for="inpNavn">Navn</label> <!--id?-->
+      <input
+              type="text"
+              name="navn"
+              class="inputfield"
+              placeholder="eks. Roskilde"
+              id="inpNavn"> <!--name bruger vi i js-->
+    </div>
+    <!--det vi slås mest med, at putte en foreign key på et child objekt, sætte region på kommune-->
+    <div>
+      <select id="ddRegioner"></select>
+    </div>
+    <button type="submit" title="Gem" id="submit">Opret</button>
+  </form> <!--man bør kunne sende formen direkte uden js men muligvis virker det ikke fordi den ikke sender det som json-->
+
+</div>
+
+<script src="js/formkommune.js"></script>
+<script src="js/fetchkommunerlokal.js"></script>
+</body>
+</html>

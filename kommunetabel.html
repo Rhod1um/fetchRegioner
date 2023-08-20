@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tabel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Kommuner i Danmark</h1>
+
+<button id="pbFetchRegioner">Hent kommuner</button> <!--her smides kommuner ind som er hentet fra egen database-->
+<select id="ddRegioner"></select>
+<button id="pbCreateTable">Byg tabel</button>
+<br><br>
+
+<div>
+  <table id="tblKommune" class="table">  <!--hav css styling klar på forhånd! add til hvilken som helst tabel
+   https://www.geeksforgeeks.org/how-to-fix-the-width-of-columns-in-the-table/
+   og style knapper
+   https://www.freecodecamp.org/news/css-button-style-hover-color-and-background/
+   bare søg på fx beautiful table styling, fx se her: https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l
+
+    -->
+    <tr>
+        <th>Kode</th>
+        <th>Navn</th>
+        <th>Region</th>
+        <th>foto</th>
+        <th>knap</th>
+    </tr>
+  </table>
+</div>
+
+<script src="js/fetchkommunerlokal.js"></script>
+<script src="js/createtable.js"></script>
+</body>
+</html>
